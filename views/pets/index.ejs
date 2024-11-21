@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets page</title>
+</head>
+<body>
+    <h1>here is all the pets posted</h1>
+    <ul>
+        <% pets.forEach(pet => { %>
+          <li><a href="/pets/<%= pet._id %>"><%= pet.name %></a></li>  
+        <% }); %>
+    </ul>
+</body>
+</html>
