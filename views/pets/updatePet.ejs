@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Pet</title>
+</head>
+<body>
+    <h1>Edit <%= pet.name %></h1>
+    <form action="/pets/<%= pet._id %>?_method=put" method="post">
+        <label for="name">name</label>
+        <input type="text" name="name" value="<%= pet.name %>" id="name"/>
+
+        <label for="typeOfAnimal">What Type of Animal is your pet?</label>
+        <input type="text" name="typeOfAnimal" id="typeOfAnimal">
+
+        <button type="submit">Update Pet!</button>
+    </form>
+</body>
+</html>

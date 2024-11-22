@@ -7,9 +7,10 @@
 </head>
 <body>
     <h1>here is all the pets posted</h1>
+    <a href="/pets/addPet">add a Pet</a>
     <ul>
         <% pets.forEach(pet => { %>
-          <li><a href="/pets/<%= pet._id %>"><%= pet.name %></a></li>  
+           <li><a href="/pets/<%= pet._id %>"><%= pet.name %></a></li> 
         <% }); %>
     </ul>
 </body>
