@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Pet</title>
+    <link rel="stylesheet" type="text/css" href="/CSS/styles.css">
 </head>
 <body>
     <h1>Edit <%= pet.name %></h1>
-    <form action="/pets/<%= pet._id %>?_method=put" method="post">
-        <label for="name">name</label>
-        <input type="text" name="name" value="<%= pet.name %>" id="name"/>
+    <form action="/pets/<%= pet._id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <label for="name">Name</label>
+        <input type="text" name="name" value="<%= pet.name %>" id="name" required />
 
         <label for="typeOfAnimal">What Type of Animal is your pet?</label>
-        <input type="text" name="typeOfAnimal" id="typeOfAnimal">
+        <input type="text" name="typeOfAnimal" id="typeOfAnimal" value="<%= pet.typeOfAnimal %>" required />
+
+        <label for="description">Description</label>
+        <textarea name="description" id="description" required><%= pet.description %></textarea>
+
+        <label for="image">Image</label>
+        <input type="file" name="image" id="image" />
+        <input type="hidden" name="existingImageUrl" value="<%= pet.imageUrl %>" />
 
         <button type="submit">Update Pet!</button>
     </form>

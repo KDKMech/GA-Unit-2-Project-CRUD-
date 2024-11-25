@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: teal;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+button {
+    padding: 15px;
+    border-radius: 5px;
+    gap: 5px;
+    background-color: skyblue;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-around;
+    /* color: green; */
+}
+
+
+
+a {
+    color: lightgray;
+}
+a:hover {
+    color: red;
+    flex-direction: column;
+}
+img {
+    border-radius: 5px;
+    border: blue;
+    border-width: 2px;
+}

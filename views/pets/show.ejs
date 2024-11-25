@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= pet._id %></title>
+    <link rel="stylesheet" type="text/css" href="/CSS/styles.css">
 </head>
 <body>
     <h1><%= pet.name %></h1>
     <h2><%= pet.typeOfAnimal %></h2>
+    <p><%= pet.description %></p>
+    <% if (pet.imageUrl) { %>
+        <img src="<%= pet.imageUrl %>" width="400"/>
+    <% } %>
+
     <!-- controls -->
     <a href="/pets"><button>Back to all Pets</button></a>
     <a href="/pets/<%=pet._id%>/updatePet"><button>Update your pet!</button></a>
